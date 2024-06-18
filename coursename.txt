@@ -1,0 +1,10 @@
+c1,Programming Language I,CSE115
+c2,Programming Language II,CSE215,
+c3,Data Structure And Algorithm,CSE225
+c4,Pre-Calculus-I,MAT116
+c5,Linear Algebra,MAT125
+c6,Physic I,PHY107
+c7,PhysicsII,PHY108
+c8,Electrical Circuits I,EEE141
+c9,Analog Electronics I,EEE111
+c10,Digital Logic Design,CSE231

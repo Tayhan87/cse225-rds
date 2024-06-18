@@ -1,0 +1,81 @@
+# depslib dependency file v1.0
+1715848264 source:e:\cpp\object\emne\rds\main.cpp
+	<iostream>
+	<fstream>
+	"nodetype.cpp"
+
+1715848088 source:e:\cpp\object\emne\rds\nodetype.cpp
+	<iostream>
+
+1715848088 e:\cpp\object\emne\rds\nodetype.cpp
+	<iostream>
+
+1718723591 source:e:\cpp\project 2.0\rds\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	"coursename.cpp"
+	"coursedetail.cpp"
+	"filetolink.cpp"
+	"hashtable.cpp"
+	"writefile.cpp"
+
+1715854538 e:\cpp\project 2.0\rds\nodetype.cpp
+	<iostream>
+
+1715854538 source:e:\cpp\project 2.0\rds\nodetype.cpp
+	<iostream>
+
+1718721829 e:\cpp\project 2.0\rds\coursename.cpp
+	<iostream>
+
+1718721829 source:e:\cpp\project 2.0\rds\coursename.cpp
+	<iostream>
+
+1718721829 source:e:\cpp\project 2.0\rds\coursedetail.cpp
+	<iostream>
+
+1718721829 e:\cpp\project 2.0\rds\coursedetail.cpp
+	<iostream>
+
+1718721829 source:e:\cpp\project 2.0\rds\filetolink.cpp
+	<iostream>
+	<fstream>
+	"coursename.cpp"
+	"coursedetail.cpp"
+
+1718721829 e:\cpp\project 2.0\rds\filetolink.cpp
+	<iostream>
+	<fstream>
+	"coursename.cpp"
+	"coursedetail.cpp"
+
+1718721829 source:e:\cpp\project 2.0\rds\hashtable.cpp
+	<unordered_map>
+	<vector>
+	"coursename.cpp"
+	"coursedetail.cpp"
+
+1718721829 e:\cpp\project 2.0\rds\hashtable.cpp
+	<unordered_map>
+	<vector>
+	"coursename.cpp"
+	"coursedetail.cpp"
+
+1718640246 source:e:\cpp\project 2.0\rds\hashmap.cpp
+	<fstream>
+	"coursename.cpp"
+	"coursedetail.cpp"
+	"filetolink.cpp"
+	"hashtable.cpp"
+
+1718723812 source:e:\cpp\project 2.0\rds\writefile.cpp
+	<iostream>
+	<fstream>
+	"coursename.cpp"
+
+1718723812 e:\cpp\project 2.0\rds\writefile.cpp
+	<iostream>
+	<fstream>
+	"coursename.cpp"
+
