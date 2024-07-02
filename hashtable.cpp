@@ -5,26 +5,22 @@
 #include <vector>
 #include "coursename.cpp"
 #include "coursedetail.cpp"
-
-template<class t1, class t2, class t3, class t4, class t5, class t6, class t7>
+using namespace std;
 class CourseHashTable
 {
 private:
-    unordered_map<t1, vector<typename coursedetail<t1, t2, t3, t4, t5, t6, t7>::node*>> hashTable;
+    unordered_map<string, vector<coursedetail::node*>> hashTable;
 
 public:
-    void insertCourse(coursename<t1, t2, t3> &courseNames, coursedetail<t1, t2, t3, t4, t5, t6, t7> &courseDetails)
+    void insertCourse(coursename &courseNames, coursedetail &courseDetails)
     {
-        typename coursename<t1, t2, t3>::node* cnameNode = courseNames.getCourselist();
-        typename coursedetail<t1, t2, t3, t4, t5, t6, t7>::node* cdetailNode = courseDetails.getCourselist();
+        auto cnameNode = courseNames.getCourselist();
+        auto cdetailNode = courseDetails.getCourselist();
 
-        while (cnameNode != nullptr){
-
-            while (cdetailNode != nullptr){
-
-                if (cnameNode->id == cdetailNode->id){
-
-                    hashTable[cnameNode->id].push_back( cdetailNode);
+        while (cnameNode != nullptr) {
+            while (cdetailNode != nullptr) {
+                if (cnameNode->id == cdetailNode->id) {
+                    hashTable[cnameNode->id].push_back(cdetailNode);
                 }
                 cdetailNode = cdetailNode->next;
             }
@@ -33,13 +29,22 @@ public:
         }
     }
 
-    vector<typename coursedetail<t1, t2, t3, t4, t5, t6, t7>::node*> getCourseDetail(t1 id)
+    vector<coursedetail::node*> getCourseDetail(const string &id)
     {
-        if (hashTable.find(id) != hashTable.end())
-        {
+        if (hashTable.find(id) != hashTable.end()) {
             return hashTable[id];
         }
-        return vector<typename coursedetail<t1, t2, t3, t4, t5, t6, t7>::node*>();
+        return vector<coursedetail::node*>();
+    }
+
+
+    vector<string> getAllKeys() const
+    {
+        vector<string> keys;
+        for (const auto& pair : hashTable) {
+            keys.push_back(pair.first);
+        }
+        return keys;
     }
 };
 

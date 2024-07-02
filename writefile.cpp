@@ -3,24 +3,37 @@
 
 #include <iostream>
 #include <fstream>
-#include"coursename.cpp"
+#include "facultyinfolist.h"
+
 using namespace std;
 
-template<class t1, class t2, class t3>
-class writingfile{
-
+class filewriter {
 public:
-    void writecoursename(coursename<t1, t2, t3> &cname) {
-        ofstream file("E:\\CPP\\Project 2.0\\RDS\\test.txt");
-        typename coursename<t1, t2, t3>::node* temp = cname.getCourselist();
+    void writefaculty(faculty_info_list &faculty) {
+        ofstream file("E:\\CPP\\Project 2.0\\cse225-rds\\facultyinfo.txt");
+        if (!file.is_open()) {
+            cerr << "Unable to open file for writing." << endl;
+            return;
+        }
+
+        faculty_info_list::node* temp = faculty.getfacultylisthead();
 
         while (temp != nullptr) {
-            file << temp->id << "," << temp->name << "," << temp->code<< endl;
-            temp = temp->next;
+
+            file << temp->initial << ","
+                 << temp->name << ","
+                 << temp->qualification << ","
+                 << temp->dob << ","
+                 << temp->phone << ","
+                 << temp->department << ","
+                 << temp->pass << ","
+                 << temp->prof_email << ","
+                 << temp->per_email << endl;
+                 temp = temp->next;
+                cout<<"";
         }
         file.close();
     }
 };
 
-#endif
-
+#endif // FILEWRITER_H

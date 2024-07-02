@@ -1,0 +1,7 @@
+SFT,Syed Fazlul Tawfiq,PhD at University of California,23rd June 1987,1868364556,Computer Science and Engineering,12345,syed.fazlul@northsouth.edu,syed57@gamil.com
+MLE,Mahmud Liton Ehsan,PhD at University of Caltech,2nd February 1993,1536247943,Computer Science and Engineering,56789,mahmudliton34@northsouth.edu,mahmud.liton@gamil.com
+ABS,Abdul Baker Shimul,PhD at Harvard University ,7th July 1986,1623489621,Math,98765,abdul.baker@northsouth.edu,baker234@gmail.com
+ITN,Intesier Tahsin Nafi,PhD at Universiy of Oxford,13th March 1997,1636247936,Physics,54321,tahsin.nafi@northsouth.edu,tahsin139@gmail.com
+MUO,Muhammad Uddin Omar, PhD at Harvard University,22th October 1996,1736247992,Math,11111,muhammad.omar@northsouth.edu,omar45@gmail.com
+MNZZ,Muhaiminun Nasir Zaman Zia, PhD at University of Torentto,19th September 1995,1562479493,Physics,22222,nasir.zia@northsouth.edu,nasirzaman23@gmail.com
+MLE,Muhammad Liton Elias, PhD at University of Cambridge,28th January 1969,1464362473,Physics,33333,liton.elias@northsouth.edu,liton290@gmail.com

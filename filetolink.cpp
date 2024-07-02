@@ -1,129 +1,82 @@
 #ifndef FILETOLINK_H
 #define FILETOLINK_H
 
+#include <iostream>
+#include <fstream>
+#include "coursename.cpp"
+#include "coursedetail.cpp"
+using namespace std;
 
-#include<iostream>
-#include<fstream>
-#include"coursename.cpp"
-#include"coursedetail.cpp"
-
-class filetolink
-{
-
+class filetolink {
 public:
-
-
-    coursename<string,string,string> nametolist()
-    {
-
-        ifstream read("E:\\CPP\\Project 2.0\\RDS\\coursename.txt");
-        if(!read.is_open())
-        {
-            cout<<"File could not find."<<endl;
-            return coursename<string,string,string>();
+    coursename nametolist() {
+        ifstream read("E:\\CPP\\Project 2.0\\cse225-rds\\coursename.txt");
+        if (!read.is_open()) {
+            cout << "File could not be found." << endl;
+            return coursename();
         }
-        coursename<string,string,string> c;
-        string s,id="",name="",code="";
-        int k=0;
-        while(getline(read,s))
-        {
-            for(int i=0; i<s.length(); i++)
-            {
-                if(s[i]==',')
-                {
+        coursename c;
+        string s, id = "",department="", name = "", code = "";
+        int k = 0;
+        while (getline(read, s)) {
+            for (char ch : s) {
+                if (ch == ',') {
                     k++;
+                } else if (k == 0) {
+                    id += ch;
+                } else if (k == 1) {
+                    department += ch;
+                } else if (k == 2) {
+                    name += ch;
+                }else if (k == 2) {
+                    code += ch;
                 }
-                else if(k==0)
-                    id+=s[i];
-                else if(k==1)
-                    name+=s[i];
-                else if(k==2)
-                    code+=s[i];
             }
-            c.insertcourse(id,name,code);
-            id="";
-            name="";
-            code="";
-            k=0;
+            c.insertcourse(id,department, name, code);
+            id = "";
+            department="";
+            name = "";
+            code = "";
+            k = 0;
         }
         read.close();
         return c;
     }
 
-    coursedetail<string,string,string,string,string,string,string> detailtolist()
-    {
+coursedetail detailtolist() {
+    ifstream read2("coursedetail.txt");
+    if (!read2.is_open()) {
+        cout << "File could not be found." << endl;
+        return coursedetail();
+    }
 
-        ifstream read2("E:\\CPP\\Project 2.0\\RDS\\coursedetail.txt");
-        if(!read2.is_open())
-        {
-            cout<<"File could not find."<<endl;
-            return   coursedetail<string,string,string,string,string,string,string>();
-        }
+    coursedetail c;
+    string str, id = "", section = "", days = "", timing = "", room = "", faculty = "", credit = "";
+    int k = 0;
+    while (getline(read2, str)) {
+        k = 0; // reset counter for each new line
+        id = section = days = timing = room = faculty = credit = ""; // reset all fields
 
-        coursedetail<string,string,string,string,string,string,string> c;
-        string str,section="",days="",timing="",room="",faculty="",credit="",id="";
-        int k=0;
-        while(getline(read2,str))
-        {
-            for(int i=0; i<str.length(); i++)
-            {
-                if(str[i]==',')
-                    k++;
-
-                else if(k==0)
-                    id+=str[i];
-
-                else if(k==1)
-                    section+=str[i];
-
-                else if(k==2)
-                    days+=str[i];
-
-                else if(k==3)
-                    timing+=str[i];
-
-                else if(k==4)
-                    room+=str[i];
-
-                else if(k==5)
-                    faculty+=str[i];
-
-                else if(k==6)
-                    credit+=str[i];
+        for (char ch : str) {
+            if (ch == ',') {
+                k++;
+            } else {
+                if (k == 0) id += ch;
+                else if (k == 1) section += ch;
+                else if (k == 2) days += ch;
+                else if (k == 3) timing += ch;
+                else if (k == 4) room += ch;
+                else if (k == 5) faculty += ch;
+                else if (k == 6) credit += ch;
             }
+        }
+        c.insertcourse(id, section, days, timing, room, faculty, credit);
+    }
+    read2.close();
+    return c;
+}
 
-            c.insertcourse(id,section,days,timing,room,faculty,credit);
-            id="";
-            section="";
-            days="";
-            timing="";
-            room="";
-            faculty="";
-            credit="";
-            k=0;
-        }
-        read2.close();
-        return c;
-    }
-
-    void printname(auto c1)
-    {
-        string a,b,c;
-        for(int i=0; i<c1.getlength(); i++)
-        {
-            c1.getcourse(a,b,c);
-            cout<<a<<" "<<b<<" "<<c<<endl;
-        }
-    }
-    void printdetail(auto c1)
-    {
-        string a,b,c,d,e,f,g;
-        for(int i=0; i<c1.getlength(); i++)
-        {
-            c1.getcourse(a,b,c,d,e,f,g);
-            cout<<a<<" "<<b<<" "<<c<<" "<<d<<" "<<e<<" "<<f<<" "<<g<<endl;
-        }
-    }
 
 };
+
 #endif

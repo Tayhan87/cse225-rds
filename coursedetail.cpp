@@ -1,25 +1,25 @@
 #ifndef COURSEDETAIL_H
 #define COURSEDETAIL_H
 
-#include<iostream>
+#include <iostream>
+#include <string>
+#include <fstream>
+
 using namespace std;
 
-template<class t1, class t2, class t3, class t4, class t5, class t6, class t7>
-
-class coursedetail
-{
-
+class coursedetail {
 public:
-    struct node
-    {
-        t1 id;
-        t2 section;
-        t3 days;
-        t4 timing;
-        t5 room;
-        t6 faculty;
-        t7 credit;
+    struct node {
+        string id;
+        string section;
+        string days;
+        string timing;
+        string room;
+        string faculty;
+        string credit;
         node* next;
+        node(const string& id_, const string& section_, const string& days_, const string& timing_, const string& room_, const string& faculty_, const string& credit_)
+            : id(id_), section(section_), days(days_), timing(timing_), room(room_), faculty(faculty_), credit(credit_), next(nullptr) {}
     };
 
 private:
@@ -28,91 +28,70 @@ private:
     int length;
 
 public:
-    coursedetail()
-    {
-        courselist=NULL;
-        currentlocation=NULL;
-        length=0;
+    coursedetail() : courselist(nullptr), currentlocation(nullptr), length(0) {}
+
+    ~coursedetail() {
+        while (courselist != nullptr) {
+            node* temp = courselist;
+            courselist = courselist->next;
+            delete temp;
+        }
     }
 
-    void insertcourse(t1 a, t2 b, t3 c, t4 d, t5 e, t6 f, t7 g)
-    {
-
-        node* temp=new node;
-
-        temp->id=a;
-        temp->section=b;
-        temp->days=c;
-        temp->timing=d;
-        temp->room=e;
-        temp->faculty=f;
-        temp->credit=g;
-
-        temp->next=courselist;
-        courselist=temp;
-
+    void insertcourse(const string& a, const string& b, const string& c, const string& d, const string& e, const string& f, const string& g) {
+        node* temp = new node(a, b, c, d, e, f, g);
+        temp->next = courselist;
+        courselist = temp;
         length++;
     }
 
-
-    void deletecourse(t1 a)
-    {
-        node* temp;
-        temp=courselist;
-        if(temp->id==a)
-        {
-            courselist=courselist->next;
-            delete temp;
+    void deletecourse(const string& a) {
+        node* temp = courselist;
+        node* prev = nullptr;
+        while (temp != nullptr && temp->id != a) {
+            prev = temp;
+            temp = temp->next;
         }
-        else
-        {
-            while(temp!=NULL && temp->next!=NULL)
-            {
-                if(temp->next->id==a)
-                {
-                    currentlocation=temp->next;
-                    temp->next=temp->next->next;
-                    delete currentlocation;
-
-                }
-                temp=temp->next;
-            }
+        if (temp == nullptr) return; // Course not found
+        if (prev == nullptr) { // Deleting the first node
+            courselist = courselist->next;
+        } else {
+            prev->next = temp->next;
         }
-
+        delete temp;
+        length--;
     }
 
-    int getlength()
-    {
+    int getlength() const {
         return length;
     }
 
-    void getcourse(t1 &a, t2 &b, t3 &c, t4 &d, t5 &e, t6 &f, t7 &g)
-    {
-
-        if(currentlocation==NULL)
-            currentlocation=courselist;
-        else
-            currentlocation=currentlocation->next;
-        if(currentlocation!=nullptr)
-        {
-            a=currentlocation->id;
-            b=currentlocation->section;
-            c=currentlocation->days;
-            d=currentlocation->timing;
-            e=currentlocation->room;
-            f=currentlocation->faculty;
-            g=currentlocation->credit;
+    bool getcourse(string& a, string& b, string& c, string& d, string& e, string& f, string& g) {
+        if (currentlocation == nullptr) {
+            currentlocation = courselist;
+        } else {
+            currentlocation = currentlocation->next;
         }
 
+        if (currentlocation == nullptr) return false;
+
+        a = currentlocation->id;
+        b = currentlocation->section;
+        c = currentlocation->days;
+        d = currentlocation->timing;
+        e = currentlocation->room;
+        f = currentlocation->faculty;
+        g = currentlocation->credit;
+        return true;
     }
 
-    node* getCourselist() const
-    {
+    void reset() {
+        currentlocation = nullptr;
+    }
+
+    node* getCourselist() const {
         return courselist;
     }
-
 };
+
 #endif
-
-
-

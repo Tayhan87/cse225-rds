@@ -79,3 +79,136 @@
 	<fstream>
 	"coursename.cpp"
 
+1719938068 source:e:\cpp\project 2.0\cse225-rds\coursedetail.cpp
+	<iostream>
+	<string>
+	<fstream>
+
+1719930747 source:e:\cpp\project 2.0\cse225-rds\coursename.cpp
+	<iostream>
+
+1719939870 source:e:\cpp\project 2.0\cse225-rds\filetolink.cpp
+	<iostream>
+	<fstream>
+	"coursename.cpp"
+	"coursedetail.cpp"
+
+1719930747 e:\cpp\project 2.0\cse225-rds\coursename.cpp
+	<iostream>
+
+1719938068 e:\cpp\project 2.0\cse225-rds\coursedetail.cpp
+	<iostream>
+	<string>
+	<fstream>
+
+1719931291 source:e:\cpp\project 2.0\cse225-rds\hashtable.cpp
+	<unordered_map>
+	<vector>
+	"coursename.cpp"
+	"coursedetail.cpp"
+
+1719931916 source:e:\cpp\project 2.0\cse225-rds\main.cpp
+	<iostream>
+	<fstream>
+	<vector>
+	"coursename.cpp"
+	"coursedetail.cpp"
+	"filetolink.cpp"
+	"hashtable.cpp"
+	"writefile.cpp"
+	"interface.h"
+	<csignal>
+	"main.h"
+
+1719940529 e:\cpp\project 2.0\cse225-rds\filetolink.cpp
+	<iostream>
+	<fstream>
+	"coursename.cpp"
+	"coursedetail.cpp"
+
+1719931291 e:\cpp\project 2.0\cse225-rds\hashtable.cpp
+	<unordered_map>
+	<vector>
+	"coursename.cpp"
+	"coursedetail.cpp"
+
+1719709341 e:\cpp\project 2.0\cse225-rds\writefile.cpp
+	<iostream>
+	<fstream>
+	"facultyinfolist.h"
+
+1719709341 source:e:\cpp\project 2.0\cse225-rds\writefile.cpp
+	<iostream>
+	<fstream>
+	"facultyinfolist.h"
+
+1718841408 e:\cpp\project 2.0\cse225-rds\frontpage.cpp
+	<iostream>
+	<functional>
+	"facultyinfolist.h"
+	"facultyinfofile.h"
+
+1718755438 e:\cpp\project 2.0\cse225-rds\passwordfile.cpp
+	<iostream>
+	<fstream>
+	"passwordlist.cpp"
+
+1718749612 e:\cpp\project 2.0\cse225-rds\passwordlist.cpp
+	<iostream>
+
+1718749612 source:e:\cpp\project 2.0\cse225-rds\passwordlist.cpp
+	<iostream>
+
+1718755438 source:e:\cpp\project 2.0\cse225-rds\passwordfile.cpp
+	<iostream>
+	<fstream>
+	"passwordlist.cpp"
+
+1718841269 source:e:\cpp\project 2.0\cse225-rds\frontpage.cpp
+	<iostream>
+	<functional>
+	"facultyinfolist.h"
+	"facultyinfofile.h"
+
+1718826997 source:e:\cpp\project 2.0\cse225-rds\facultyinfolist.cpp
+	"facultyinfolist.h"
+	<iostream>
+
+1718822314 e:\cpp\project 2.0\cse225-rds\facultyinfolist.cpp
+	"facultyinfolist.h"
+
+1718822328 e:\cpp\project 2.0\cse225-rds\facultyinfofile.cpp
+	"facultyinfofile.h"
+	<fstream>
+	<iostream>
+
+1718825487 source:e:\cpp\project 2.0\cse225-rds\facultyinfofile.cpp
+	"facultyinfofile.h"
+	<fstream>
+	<iostream>
+
+1718824088 e:\cpp\project 2.0\cse225-rds\facultyinfolist.h
+	<string>
+
+1718822314 e:\cpp\project 2.0\cse225-rds\facultyinfofile.h
+	"facultyinfolist.h"
+
+1719930140 source:e:\cpp\project 2.0\cse225-rds\interface.cpp
+	"interface.h"
+	"writefile.cpp"
+	<functional>
+	"main.h"
+	"coursename.cpp"
+	"filetolink.cpp"
+	"hashtable.cpp"
+
+1719904368 e:\cpp\project 2.0\cse225-rds\interface.h
+	<string>
+	<functional>
+	"facultyinfolist.h"
+	"facultyinfofile.h"
+	"writefile.cpp"
+	"main.h"
+
+1718841155 e:\cpp\project 2.0\cse225-rds\main.h
+

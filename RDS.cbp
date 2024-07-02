@@ -36,9 +36,17 @@
 		</Compiler>
 		<Unit filename="coursedetail.cpp" />
 		<Unit filename="coursename.cpp" />
+		<Unit filename="facultyinfofile.cpp" />
+		<Unit filename="facultyinfofile.h" />
+		<Unit filename="facultyinfolist.cpp" />
+		<Unit filename="facultyinfolist.h" />
 		<Unit filename="filetolink.cpp" />
 		<Unit filename="hashtable.cpp" />
+		<Unit filename="interface.cpp" />
+		<Unit filename="interface.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="main.h" />
+		<Unit filename="writefile.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
